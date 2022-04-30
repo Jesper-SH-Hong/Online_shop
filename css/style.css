@@ -2,6 +2,49 @@
     box-sizing: border-box
 }
 
-/* body { */
-    /* font-family: */
-/* } */
+body {
+    margin: 0 auto; /*상하0 좌우 오토로 가운데 정렬*/
+    color: #3f464d;
+
+}
+
+.inner {
+    width: 100%;
+    height: 100%; /* 안 그럼 위에서 시작함 자꾸 */
+    margin: 0 auto; 
+    /* 안의 요소도 가운데서 좀 놀게 */
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000; /* 다른 애들은 0일거라 얘가 항상 최상단 */
+}
+
+.head-container {
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-container .head-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.head-container .head-blog {
+    font-weight: bold;
+    font-size: 1.2rem;
+} 
+
+@media only screen and (min-width: 800px) {
+    .inner {
+        max-width: 800px;
+    }
+}
